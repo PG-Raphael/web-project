@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -36,6 +36,7 @@
     "firebase-tools": "^7.11.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.10.0",
+    "nodemon": "^2.0.2",
     "path": "^0.12.7",
     "popper.js": "^1.16.0",
     "rxjs": "6.3.3",
