@@ -1,5 +1,9 @@
 .footer-personal {
-  position: absolute;
-  bottom: 0;
-  height: 60px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.footer-empty-space {
+  flex: 1;
 }
