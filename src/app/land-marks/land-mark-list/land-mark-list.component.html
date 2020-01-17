@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <h3>Please Select A List</h3>
+  </div>
+</div>
+<div class="row" >
+  <div class="col-sm-6">
+    <button class="btn btn-success" (click)="onNewLandMark()">New Land Mark</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <app-land-mark-item
+      *ngFor="let landMarkEl of (landMarksState | async).landMarks; let i = index"
+      [landMark]="landMarkEl"
+      [index]="i"></app-land-mark-item>
+  </div>
+</div>
+

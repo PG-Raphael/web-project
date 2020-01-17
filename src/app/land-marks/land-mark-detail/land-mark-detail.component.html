@@ -1,0 +1,37 @@
+<div class="row ml-lg-2 ">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <img
+      [src]="(landMarkState | async).landMarks[id].imagePath"
+      alt="{{ (landMarkState | async).landMarks[id].name }}"
+      class="img-responsive detail-img"
+      >
+  </div>
+</div>
+<div class="row ml-lg-2 mt-2">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <h1>{{ (landMarkState | async).landMarks[id].name }}</h1>
+  </div>
+</div>
+<div class="row ml-lg-2">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div
+      class="btn-group"
+      ngbDropdown
+      >
+      <button class="nav-item btn btn-primary mb-2 mt-2" ngbDropdown>
+        <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown" role="button">
+          Manage
+        </a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+          <a ngbDropdownItem (click)="onEditLandMark()" >Edit Land Mark</a>
+          <a ngbDropdownItem (click)="onDeleteLandMark()">Delete Land Mark</a>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row ml-lg-2">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    {{ (landMarkState | async).landMarks[id].detailDesc }}
+  </div>
+</div>

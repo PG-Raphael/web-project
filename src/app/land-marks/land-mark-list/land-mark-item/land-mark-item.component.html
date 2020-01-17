@@ -1,0 +1,16 @@
+<a
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item clearfix land-mark-current">
+  <div class="pull-left land-mark-current__list">
+    <h4 class="list-group-item-heading">{{ landMark.name }}</h4>
+    <p class="list-group-item-text">{{ landMark.shortDesc }}</p>
+  </div>
+  <span class="land-mark-current__img">
+        <img
+          [src]="landMark.imagePath"
+          alt="{{ landMark.name }}"
+          class="img-responsive"
+          >
+      </span>
+</a>
