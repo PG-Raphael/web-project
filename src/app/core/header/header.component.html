@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">Toronto Guide</a>
+    </div>
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false"
+            aria-label="Toggle navigation"
+            (click)="isCollapse()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <ng-template [ngIf]="!(authState | async).authenticated">
+          <li><a class="nav-link" routerLink="/signup">Register</a></li>
+          <li><a class="nav-link" routerLink="/signin">Login</a></li>
+        </ng-template>
+
+        <li><a
+          class="nav-link"
+          style="cursor: pointer;"
+          (click)="onLogout()"
+          *ngIf="(authState | async).authenticated">Logout</a></li>
+
+        <li class="nav-item" ngbDropdown *ngIf="(authState | async).authenticated">
+          <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown" role="button">
+            Manage
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+            <a ngbDropdownItem (click)="onSaveData()">Save Data</a>
+            <a ngbDropdownItem (click)="onFetchData()">Fetch Data</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+.land-mark-current {
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  justify-content: space-between;
+  &__list {
+    color: black;
+   }
+
+  &__img {
+    align-self: center;
+  }
+}
+
+.img-responsive {
+  max-height: 50px;
+}
