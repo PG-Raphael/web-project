@@ -34,7 +34,7 @@
     "express": "^4.17.1",
     "firebase": "4.12.1",
     "firebase-tools": "^7.11.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.10.0",
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
